@@ -24,10 +24,6 @@ module RailsAdmin
       )
     end
 
-    initializer 'RailsAdmin pjax hook' do |app|
-      app.config.middleware.use Rack::Pjax
-    end
-
     rake_tasks do
       Dir[File.join(File.dirname(__FILE__), '../tasks/*.rake')].each { |f| load f }
     end
